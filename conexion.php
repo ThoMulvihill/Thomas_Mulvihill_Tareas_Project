@@ -1,7 +1,7 @@
 <?php
 
 $host="localhost";
-$db="login";
+$db="sagrado_corazon";
 $user="root";
 $pass="";
 
@@ -11,8 +11,8 @@ $conexionbd= new PDO (
     $user,
     $pass,
     );
-    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $conexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $conexionbd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conexionbd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 }catch (PDOException $e) {
     error_log($e->getMessage());
     http_response_code(500);
